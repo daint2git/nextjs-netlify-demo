@@ -5,7 +5,8 @@ function About() {
   const { t } = useTranslation("common");
   return (
     <div>
-      <h1>About</h1> <p>{t("error")}</p>
+      <h1>About</h1>
+      <p>{t("error")}</p>
     </div>
   );
 }
