@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 function About() {
-  const { t } = useTranslation("common", { useSuspense: false });
+  const { t } = useTranslation("common");
   return (
     <div>
       <h1>About</h1> <p>{t("error")}</p>
@@ -10,7 +10,7 @@ function About() {
   );
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
   },

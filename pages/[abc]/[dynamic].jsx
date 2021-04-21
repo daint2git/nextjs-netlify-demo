@@ -4,7 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Dynamic = () => {
   const router = useRouter();
-  const { t } = useTranslation("common", { useSuspense: false });
+  const { t } = useTranslation("common");
   const { dynamic } = router.query;
 
   return (
@@ -15,12 +15,7 @@ const Dynamic = () => {
   );
 };
 
-export const getStaticPaths = () => ({
-  paths: [],
-  fallback: true,
-});
-
-export const getStaticProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
   },
