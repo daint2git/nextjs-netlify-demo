@@ -15,6 +15,11 @@ const Dynamic = () => {
   );
 };
 
+export const getStaticPaths = () => ({
+  paths: [],
+  fallback: true,
+});
+
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
