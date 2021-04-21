@@ -12,6 +12,7 @@
     "regenerate-unicode-properties": "^8.2.0"
   },
   "scripts": {
-    "build": "next build"
+    "build": "next build",
+    "start": "next start"
   }
 }
