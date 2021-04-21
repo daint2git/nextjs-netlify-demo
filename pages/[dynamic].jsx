@@ -1,14 +1,12 @@
-import { useTranslation } from 'next-i18next';
-import { useRouter} from 'next/router'
-import { GetServerSideProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Dynamic = () => {
-  const router = useRouter()
-  const { dynamic } = router.query
+  const router = useRouter();
+  const { dynamic } = router.query;
 
-  return <p>Dynamic: {dynamic}</p>
-}
+  return <p>Dynamic: {dynamic}</p>;
+};
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
@@ -16,4 +14,4 @@ export const getServerSideProps = async ({ locale }) => ({
   },
 });
 
-export default Dynamic
+export default Dynamic;

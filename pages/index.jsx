@@ -1,3 +1,8 @@
 export default function Index() {
-  return <h1>Index</h1>;
+  return (
+    <div>
+      <h1>Index</h1>
+      <img src="images/logo192.png" alt="logo" />
+    </div>
+  );
 }
