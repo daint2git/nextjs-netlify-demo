@@ -1,15 +1,27 @@
+import Head from "next/head";
+
 function About({ x }) {
   return (
-    <div>
-      <h1>About</h1>
-      <p>x {x}</p>
-    </div>
+    <>
+      <Head>
+        <title>dai title</title>
+        <meta name="description" content="dai description" />
+        <meta property="og:title" content="dai og title" />
+        <meta property="og:description" content="dai og description" />
+        <meta name="og:image" content="https://picsum.photos/200" />
+        <meta name="og:url" content={window.location} />
+      </Head>
+      <div>
+        <h1>About</h1>
+        <p>x {x}</p>
+      </div>
+    </>
   );
 }
 
 export const getServerSideProps = async () => ({
   props: {
-    x: 12,
+    x: 14,
   },
 });
 
