@@ -1,19 +1,15 @@
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-function About() {
-  const { t } = useTranslation("common");
+function About({ x }) {
   return (
     <div>
       <h1>About</h1>
-      <p>{t("error")}</p>
+      <p>x {x}</p>
     </div>
   );
 }
 
-export const getServerSideProps = async ({ locale }) => ({
+export const getServerSideProps = async () => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    x: 12,
   },
 });
 
