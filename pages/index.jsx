@@ -13,3 +13,5 @@ export default function Index() {
     </div>
   );
 }
+
+export const getStaticProps = async () => ({ props: {} });
