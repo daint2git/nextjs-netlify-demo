@@ -9,7 +9,7 @@ function About({ x }) {
 
 export const getServerSideProps = async () => ({
   props: {
-    x: 12,
+    x: 14,
   },
 });
 
