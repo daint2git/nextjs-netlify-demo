@@ -4,7 +4,7 @@ function About({ x }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="images/favicon.ico?x" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="images/logo192.png" />
         <title>dai title</title>
         <meta property="description" content="dai description" />
