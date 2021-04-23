@@ -4,11 +4,11 @@ function About({ x }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="images/favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="images/logo192.png" />
         <title>dai title</title>
         <meta property="description" content="dai description" />
-        
+
         <meta property="og:title" content="dai og title" />
         <meta property="og:description" content="dai og description" />
         <meta property="og:image" content="images/og-image.jpeg" />
